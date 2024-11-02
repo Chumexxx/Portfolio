@@ -3,82 +3,85 @@ import styled from 'styled-components'
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
-import {Link } from "react-router-dom"
-import { useState } from 'react';
-
 
 const Header = () => {
-    const [sideBar, setSideBar] = useState(false)
-
-    const handleSideBar = () => {
-        setSideBar(!sideBar);
-    };
-
   return (
-    <>
-        {!sideBar && (
-            <Container>
-                <Name>
-                    <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
-                </Name>
+    <Container>
+        <Wrapper>
 
-                <NavBar>
+        <Name>
+            <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
+        </Name>
 
-                    <Link style={{ textDecoration: "none" , color: "white"}} to="/">
-                        <HomeDiv>
-                            <h2>Home</h2>
-                        </HomeDiv>
-                    </Link>
+        <NavBar>
 
-                    <Link style={{ textDecoration: "none" , color: "white"}} to="/projects">
-                        <ProjectDiv>
-                            <h2>Projects</h2>
-                        </ProjectDiv>
-                    </Link>
+            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/"> */}
+                <HomeDiv>
+                    <div>
+                    <h2 onClick={() => scrollToHome(Home)}>Home</h2>
+                    </div>
+                </HomeDiv>
+            {/* </Link> */}
 
-                    <Link style={{ textDecoration: "none" , color: "white"}} to="/skills">
-                        <SkillsDiv>
-                            <h2>Skills</h2>
-                        </SkillsDiv>
-                    </Link>
-                    
-                    <Link style={{ textDecoration: "none" , color: "white"}} to="/contact">
-                        <ContactDiv>
-                            <h2>Contact</h2>
-                        </ContactDiv>
-                    </Link>
+            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/projects"> */}
+                <ProjectDiv>
+                    <div>
+                    <h2 onClick={() => scrollToHome(Projects)}>Projects</h2>
+                    </div>
+                </ProjectDiv>
+            {/* </Link> */}
 
-                </NavBar>
+            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/skills"> */}
+                <SkillsDiv>
+                    <div>
+                    <h2>Skills</h2>
+                    </div>
+                </SkillsDiv>
+            {/* </Link> */}
+            
+            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/contact"> */}
+                <ContactDiv>
+                    <div>
+                    <h2>Contact</h2>
+                    </div>
+                
+                </ContactDiv>
+            {/* </Link> */}
 
-                <LightModeToggle>
-                    <MdDarkMode size={40}/>
-                </LightModeToggle>
+        </NavBar>
 
-                <DarkModeToggle id='themeToggle'>
-                    <MdOutlineDarkMode size={40}/>
-                </DarkModeToggle>
+        <LightModeToggle>
+            <MdDarkMode size={40}/>
+        </LightModeToggle>
 
-                <HamburgerDiv onClick={handleSideBar}>
-                    <RxHamburgerMenu size={30}/>
-                </HamburgerDiv>
-            </Container>
-        )}
+        <DarkModeToggle id='themeToggle'>
+            <MdOutlineDarkMode size={40}/>
+        </DarkModeToggle>
 
-        {sideBar && <SideBar sideBar={sideBar} setSideBar={setSideBar} />}
-    </>
+        <HamburgerDiv>
+            <RxHamburgerMenu size={30}/>
+        </HamburgerDiv>
+
+        </Wrapper>
+    </Container>
   )
 }
 
 export default Header
 
+
 const Container = styled.div`
+    width: 100%;
+    
+`
+
+const Wrapper = styled.div`
     width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    border: 1px solid white;
 `
 
 const Name = styled.div`
@@ -106,7 +109,7 @@ const Name = styled.div`
         width: 100%;
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
-        animation: shine 1s forwards;
+        animation: shine 3s forwards;
         filter: brightness(1.5); 
     }
 
@@ -131,6 +134,8 @@ const NavBar = styled.div`
     background-color: #242121;
     border: 1px solid white;
     border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     cursor: pointer;
 
     @media (max-width: 800px) {
@@ -148,8 +153,18 @@ const HomeDiv = styled.div`
     width: 80px;
     height: 40px;
 
-    HomeDiv:hover{
-        background-color: red;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        height: 40px;
+    }
+
+    div:hover{
+        background-color: #352f2f;
     }
 
 `
@@ -162,6 +177,20 @@ const ProjectDiv = styled.div`
     border: none;
     width: 110px;
     height: 40px;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        height: 40px;
+    }
+
+    div:hover{
+        background-color: #352f2f;
+    }
 `
 
 const SkillsDiv = styled.div`
@@ -172,6 +201,20 @@ const SkillsDiv = styled.div`
     border: none;
     width: 80px;
     height: 40px;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: none;
+        width: 120px;
+        height: 40px;
+    }
+
+    div:hover{
+        background-color: #352f2f;
+    }
 `
 
 const ContactDiv = styled.div`
@@ -182,10 +225,24 @@ const ContactDiv = styled.div`
     border: none;
     width: 110px;
     height: 40px;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        height: 40px;
+    }
+
+    div:hover{
+        background-color: #352f2f;
+    }
 `
 
 const LightModeToggle = styled.div`
-    width: 60px;
+    width: 80px;
     height: 50px;
     border: none;
     border-radius: 5px;

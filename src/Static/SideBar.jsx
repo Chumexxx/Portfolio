@@ -1,27 +1,26 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Link } from "react-router-dom"
+// import React from 'react'
+// import styled from 'styled-components'
 
-const SideBar = () => {
+// const SideBar = () => {
 
-    const test = () => {
-        setSideBar (false)
-    }
-  return (
-    <Container>
+//     const test = () => {
+//         setSideBar (false)
+//     }
+//   return (
+//     <Container>
 
 
       
-    </Container>
-  )
-}
+//     </Container>
+//   )
+// }
 
-export default SideBar
+// export default SideBar
 
-const Container = styled.div`
-    width: auto;
-    height: 200px;
-    background-color: red;
-    border: white;
-    border-radius: 5px;
-`
+// const Container = styled.div`
+//     width: auto;
+//     height: 200px;
+//     background-color: red;
+//     border: white;
+//     border-radius: 5px;
+// `

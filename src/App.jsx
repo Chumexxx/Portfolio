@@ -1,13 +1,12 @@
-import Header from './Static/Header'
-import HomePage from './Pages/HomePage'
-import Footer from './Static/Footer'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from './Pages/HomePage';
+import Footer from './Static/Footer';
+import Header from './Static/Header';
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Header/> 
           <Routes>
 
@@ -15,8 +14,10 @@ function App() {
     
           </Routes>
         <Footer/>
-      </BrowserRouter>
-      
+      </BrowserRouter> */}
+      <Header/>
+      <HomePage/>
+      <Footer/>
     </>
   )
 }

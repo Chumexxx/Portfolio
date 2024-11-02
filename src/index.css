@@ -1,11 +1,13 @@
 body{
   margin: 0;
-  padding: 0 100px;
+  padding: 0 50px;
   background-color: #0B0B0D;
   color: white;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 :root {
@@ -16,9 +18,4 @@ body{
 [data-theme="dark"] {
   --background-color: #000000;
   --text-color: #ffffff;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
