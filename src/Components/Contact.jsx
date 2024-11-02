@@ -258,6 +258,10 @@ const LeftDiv = styled.div`
     border-radius: 5px;
     border: none;
   }
+
+  #button:hover{
+        transform: scale(1.1);
+    }
 `
 
 const RightDiv = styled.div`
