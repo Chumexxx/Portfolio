@@ -113,7 +113,7 @@ const Contact = () => {
       <ContactDiv>
         <LeftDiv>
           <h2>Contact Me</h2>
-          <h5>Any questions or discussions? Just write me a messge!</h5>
+          <h5>Any questions or discussions? Just write me a message!</h5>
             <form action="https://formspree.io/f/mgveandz" method='POST'>
               <div id='jD'>
                 <input className='john' type="text" name='FirstName' placeholder='FirstName' required/>

@@ -66,15 +66,15 @@ const Header = () => {
         </NavBar>
 
         <LightModeToggle>
-            <MdDarkMode size={40}/>
+            <MdDarkMode size={25}/>
         </LightModeToggle>
 
         <DarkModeToggle id='themeToggle'>
-            <MdOutlineDarkMode size={40}/>
+            <MdOutlineDarkMode size={25}/>
         </DarkModeToggle>
 
         <HamburgerDiv>
-            <RxHamburgerMenu size={30} onClick={handleClick}/>
+            <RxHamburgerMenu size={20} onClick={handleClick}/>
         </HamburgerDiv>
 
         </Wrapper>
@@ -265,7 +265,7 @@ const ContactDiv = styled.div`
 `
 
 const LightModeToggle = styled.div`
-    width: 80px;
+    width: 60px;
     height: 50px;
     border: none;
     border-radius: 5px;
@@ -276,7 +276,7 @@ const LightModeToggle = styled.div`
     display: none;
 
     @media (max-width: 375px) {
-            width: 50px;
+            width: 40px;
             height: 40px;
         }
 `
@@ -293,7 +293,7 @@ const DarkModeToggle = styled.div`
 
     
     @media (max-width: 375px) {
-            width: 50px;
+            width: 40px;
             height: 40px;
         }
 `
@@ -314,7 +314,7 @@ const HamburgerDiv = styled.div`
     }
 
     @media (max-width: 375px) {
-            width: 50px;
+            width: 40px;
             height: 40px;
     }
 
