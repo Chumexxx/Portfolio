@@ -39,18 +39,25 @@ const Hero = () => {
 export default Hero
 
 const Container = styled.div`
-  margin-top: 120px;
+  margin-top: 30px;
   width: 100%;
 `
 
 const Wrapper = styled.div`
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
     h1{
         font-size: 50px;
-        /* line-height: 10px; */
+        margin-top: 0;
+        @media (max-width: 375px) {
+           font-size: 30px;
+        }
+
+        @media (max-width: 550px) {
+           font-size: 30px;
+        }
     }
 
     p{

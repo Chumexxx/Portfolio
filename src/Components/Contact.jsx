@@ -198,11 +198,27 @@ const ContactDiv = styled.div`
     flex-wrap: wrap;
     width: 500px;
   }
+
+  @media (max-width: 550px) {
+    width: 300px;
+  }
+
+  @media (max-width: 375px) {
+    width: 300px;
+  }
 `
 
 const LeftDiv = styled.div`
   width: 500px;
   height: 500px;
+
+  @media (max-width: 375px) {
+    width: 300px;
+  }
+
+  @media (max-width: 550px) {
+    width: 300px;
+  }
 
 
   h1{
@@ -230,6 +246,14 @@ const LeftDiv = styled.div`
         border-radius: 5px;
         border: none;
         padding: 15px;
+
+        @media (max-width: 375px) {
+          width: 100px;
+          }
+
+        @media (max-width: 550px) {
+        width: 100px;
+        }
     }
   }
 
@@ -238,6 +262,14 @@ const LeftDiv = styled.div`
     padding: 15px;
     border-radius: 5px;
     border: none;
+
+    @media (max-width: 375px) {
+      width: 270px;
+    }
+
+    @media (max-width: 550px) {
+      width: 270px;
+    }
   }
 
   #tA{
@@ -246,6 +278,16 @@ const LeftDiv = styled.div`
     padding: 15px;
     border-radius: 5px;
     border: none;
+
+    @media (max-width: 375px) {
+      width: 270px;
+      height: 80px;
+    }
+
+    @media (max-width: 550px) {
+      width: 270px;
+      height: 80px;
+    }
   }
 
   #button{

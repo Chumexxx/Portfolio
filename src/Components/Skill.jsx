@@ -17,6 +17,7 @@ import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { BiLogoMongodb } from "react-icons/bi";
 import { TbSql } from "react-icons/tb";
+import { FaFigma } from "react-icons/fa";
 import { SiJupyter } from "react-icons/si";
 import { SiPycharm } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
@@ -72,6 +73,7 @@ const Skill = () => {
             <SiRedux size={40} color='red'/>
             <VscVscode size={40} color='darkblue'/>
             <FaGithub size={40}/>
+            <FaFigma size={40} color='pink'/>
             <SiVite size={40} color='red'/>
             <SiVercel size={40}/>
             <BiLogoNetlify size={40} color='teal'/>
@@ -116,6 +118,14 @@ const Wrapper = styled.div`
   @media (max-width: 800px) {
       flex-wrap: wrap;
     }
+
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    }
+
+  @media (max-width: 375px) {
+    flex-wrap: wrap;
+    }
 `
 
 const LanguagesAndFrameworksDiv = styled.div`
@@ -134,12 +144,15 @@ const LanguagesAndFrameworksDiv = styled.div`
 
   @media (max-width: 1250px) {
       height: 400px;
-    }
-    
+  }
 
-  /* LanguagesAndFrameworksDiv:hover{
-  transform: scale(1.1);
-} */
+  @media (max-width: 550px) {
+      height: 500px;
+  }
+
+  @media (max-width: 375px) {
+      height: 500px;
+  }
 
 `
 
@@ -161,4 +174,12 @@ const DatabaseAndToolsDiv = styled.div`
   @media (max-width: 1250px) {
       height: 400px;
     }
+
+  @media (max-width: 550px) {
+      height: 500px;
+  }
+
+  @media (max-width: 375px) {
+      height: 500px;
+  }
 `

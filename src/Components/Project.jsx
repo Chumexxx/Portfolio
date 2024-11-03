@@ -24,13 +24,13 @@ const Project = () => {
                 <h5>Enables users look through a wide list of potential <br />questions to get answers quickly.</h5>
                 <IconsDiv>
                   <a href="https://aof-scholars-faq.vercel.app/">
-                    <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                    <div  style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                        <h5 style={{fontSize: "15px"}}>Website</h5>
                        <IoIosArrowRoundForward size={40} color='black'/>
                      </div>
                   </a>
                   <a  href="https://github.com/Chumexxx/AOF-Scholars-FAQ"> 
-                    <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                    <div  style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                       <h5 style={{fontSize: "15px"}}>Github</h5>
                         <FaGithub size={30} color='black'/>
                     </div>
@@ -52,7 +52,7 @@ const Project = () => {
                     </div>
                     </a>
                       <a  href="https://github.com/Chumexxx/Funiro-WebPage"> 
-                        <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                        <div className='button' style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                           <h5 style={{fontSize: "15px"}}>Github</h5>
                           <FaGithub size={30} color='black'/>
                         </div>
@@ -98,7 +98,7 @@ const Project = () => {
                 </a>
 
                 <a  href="https://github.com/Chumexxx/All-Countries-Website"> 
-                  <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                  <div className='button' style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                     <h5 style={{fontSize: "15px"}}>Github</h5>
                     <FaGithub size={30} color='black'/>
                     </div>
@@ -127,7 +127,7 @@ const Project = () => {
             <Card1>
               <img src={ModernLibraryAPI} alt="" />
               <h2>E-Library Application API</h2>
-              <h5>Fully reliable server side API that helps you interract eith the frontend. Contains different schemas for modern day e-library application. Built with ASP.NETCore on the .NET stack. <br /> This API is built with the future of Libraries in mind. A Modern day library API that supportd the frontend to give users the best experience.</h5>
+              <h5>Fully reliable server side API that helps you interract eith the frontend. Contains different schemas for modern day e-library application. Built with ASP.NETCore on the .NET stack. <br />A Modern day library API that supports the frontend to give users the best experience.</h5>
               <IconsDiv>
                 <a  href="https://github.com/Chumexxx/.NET-E-Library-API"> 
                   <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
@@ -146,7 +146,7 @@ const Project = () => {
               <h5>Fully reliable server side API that helps you interract eith the frontend. Contains different schemas for modern day e-library application. Built with ASP.NETCore on the .NET stack.</h5>
               <IconsDiv>
                 <a  href="https://github.com/Chumexxx/FinShark_API"> 
-                  <div style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                  <div className='button' style={{backgroundColor: "white" , color: "black" , width: "130px" , height: "45px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                     <h5 style={{fontSize: "15px"}}>Github</h5>
                     <FaGithub size={30} color='black'/>
                   </div>
@@ -183,12 +183,6 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     gap: 50px;
 
-    img{
-        width: 400px;
-        /* height: 200px; */
-        border-radius: 10px;
-    }
-
     @media (max-width: 800px) {
         flex-wrap: wrap;
     }
@@ -202,27 +196,41 @@ const CardDiv = styled.div`
     border-radius: 10px;
     border: 1px solid white;
     padding: 15px;
-    /* position: sticky; */
-  /* top: 20vh;
-  transform-origin: center;
-  transform: ${({ scale }) => `scale(${scale})`};
-  transition: transform 0.1s ease-out; */
 
     h2{
         font-size: 30px;
     }
+
+    @media (max-width: 375px) {
+      width: 250px;
+    }
+
+    @media (max-width: 550px) {
+      width: 250px;
+    }
 `
 
 const Card1 = styled.div`
+    img{
+        width: 400px;
+        border-radius: 10px;
 
+      @media (max-width: 375px) {
+      width: 250px;
+      }
+
+      @media (max-width: 550px) {
+      width: 250px;
+      }
+    }
     
 `
 
 const IconsDiv = styled.div`
-    
     display: flex;
     gap: 20px;
     justify-content: center;
+
     a{
         text-decoration: none;
     }
@@ -230,4 +238,6 @@ const IconsDiv = styled.div`
     div:hover{
         transform: scale(1.1);
     }
+
+ 
 `

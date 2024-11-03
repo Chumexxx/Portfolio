@@ -3,8 +3,23 @@ import styled from 'styled-components'
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
+import {useState} from "react"
+
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+        document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+        document.querySelector('.sidebar')?.classList.toggle('open');
+
+        // document.querySelector('.sidebar')?.classList.add('open');
+        // document.querySelector('.overlay')?.classList.add('open');
+        // document.body.style.overflow = 'hidden';
+    };
+
   return (
     <Container>
         <Wrapper>
@@ -59,7 +74,7 @@ const Header = () => {
         </DarkModeToggle>
 
         <HamburgerDiv>
-            <RxHamburgerMenu size={30}/>
+            <RxHamburgerMenu size={30} onClick={handleClick}/>
         </HamburgerDiv>
 
         </Wrapper>
@@ -82,6 +97,10 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     justify-content: space-between;
+
+    @media (max-width: 375px) {
+
+    }
 `
 
 const Name = styled.div`
@@ -99,6 +118,10 @@ const Name = styled.div`
         position: relative;
         overflow: hidden;
         display: inline-block;
+
+        @media (max-width: 375px) {
+            font-size: 20px;
+        }
     }
 
     h5:hover::before{
@@ -251,6 +274,11 @@ const LightModeToggle = styled.div`
     align-items: center;
     background-color: #242121;
     display: none;
+
+    @media (max-width: 375px) {
+            width: 50px;
+            height: 40px;
+        }
 `
 
 const DarkModeToggle = styled.div`
@@ -262,6 +290,12 @@ const DarkModeToggle = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #242121;
+
+    
+    @media (max-width: 375px) {
+            width: 50px;
+            height: 40px;
+        }
 `
 
 const HamburgerDiv = styled.div`
@@ -278,4 +312,13 @@ const HamburgerDiv = styled.div`
     @media (max-width: 800px) {
         display: flex;
     }
+
+    @media (max-width: 375px) {
+            width: 50px;
+            height: 40px;
+    }
+
+    &:hover {
+    opacity: 0.7;
+  }
 `
