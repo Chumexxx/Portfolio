@@ -267,13 +267,6 @@ const IconsDiv = styled.div`
         text-decoration: none;
     }
 
-    div{
-
-      /* @media (max-width: 550px) {
-        width: 300px;
-      } */
-    }
-
     div:hover{
         transform: scale(1.1);
     }
