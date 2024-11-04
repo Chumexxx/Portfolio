@@ -141,6 +141,12 @@ const LanguagesAndFrameworksDiv = styled.div`
   padding: 20px;
   border: 1px solid white;
   background-color:#18181B;
+  transition: transform 0.3s ease;
+
+&:hover {
+  transform: scale(1.2);
+}
+
 
   div{
     display: flex;
@@ -179,6 +185,12 @@ const DatabaseAndToolsDiv = styled.div`
   padding: 20px;
   border: 1px solid white;
   background-color: #18181B;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   div{
     display: flex;

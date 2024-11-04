@@ -9,16 +9,19 @@ import ECommerceAPI from "../assets/E-CommerceAPI.png"
 import ModernLibraryAPI from "../assets/ModernLibraryAPI.png"
 import FinSharkAPI from "../assets/FinSharkAPI.png"
 import { FaGithub } from "react-icons/fa";
+// import { useEffect } from 'react';
 
 
 const Project = () => {
+
+  
   return (
     <Container>
       <h1>Projects</h1>
-        <Wrapper>
+        <Wrapper className='wrap'>
           <CardDiv>
 
-            <Card1>
+            <Card1 className='card'>
               <img src={FAQ} alt="" />
                 <h2>FAQ WebPage</h2>
                 <p>Enables users look through a wide list of potential <br />questions to get answers quickly.</p>
@@ -139,7 +142,7 @@ const Project = () => {
             </Card1>
           </CardDiv>
         
-          <CardDiv className='cardHover'>
+          <CardDiv>
             <Card1>
               <img src={FinSharkAPI} alt="" />
               <h2>FinShark Stock Market Application API</h2>
@@ -203,8 +206,10 @@ const CardDiv = styled.div`
   width: 400px;
   height: 460px;
   border-radius: 10px;
-  border: 1px solid white;
+  border: 1px solid #92898a;
   padding: 15px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 
   h2{
     font-size: 30px;
@@ -218,36 +223,38 @@ const CardDiv = styled.div`
     width: 250px;
   }
 
-  .cardHover:hover{
-      border: 1px solid white;
-    }
+  &:hover{
+    border: 1px solid white;
+    transform: scale(1.1);
+  }
+
 `
 
 const Card1 = styled.div`
-    img{
-        width: 400px;
-        border-radius: 10px;
+  img{
+      width: 400px;
+      border-radius: 10px;
 
-      @media (max-width: 375px) {
-      width: 250px;
-      }
-
-      @media (max-width: 550px) {
-      width: 250px;
-      }
+  @media (max-width: 375px) {
+    width: 250px;
     }
 
-    h2{
-      @media (max-width: 550px) {
+  @media (max-width: 550px) {
+    width: 250px;
+    }
+  }
+
+  h2{
+    @media (max-width: 550px) {
       font-size: 25px;
-      }
     }
+  }
 
-    p{
-      @media (max-width: 550px) {
+  p{
+    @media (max-width: 550px) {
       font-size: 15px;
-      }
     }
+  }
     
 `
 

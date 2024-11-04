@@ -5,6 +5,15 @@ import Skill from '../Components/Skill'
 import Hero from '../Components/Hero'
 
 const HomePage = () => {
+
+  // const scrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   window.scrollTo({
+  //     top: section.offsetTop,
+  //     behavior: 'smooth'
+  //   });
+  // }
+
   return (
     <div>
       <Hero/>
