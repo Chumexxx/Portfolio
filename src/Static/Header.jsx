@@ -4,23 +4,31 @@ import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {useState} from "react"
+import SideBar from './SideBar'
 
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false);
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-        document.body.style.overflow = isOpen ? 'auto' : 'hidden';
-        document.querySelector('.sidebar')?.classList.toggle('open');
-
-        // document.querySelector('.sidebar')?.classList.add('open');
-        // document.querySelector('.overlay')?.classList.add('open');
-        // document.body.style.overflow = 'hidden';
+    const handleToggle = () => {
+        setToggle(!toggle);
     };
 
+    // const [isOpen, setIsOpen] = useState(false)
+
+    // const handleClick = () => {
+    //     setIsOpen(!isOpen);
+    //     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+    //     document.querySelector('.sidebar')?.classList.toggle('open');
+
+    //     // document.querySelector('.sidebar')?.classList.add('open');
+    //     // document.querySelector('.overlay')?.classList.add('open');
+    //     // document.body.style.overflow = 'hidden';
+    // };
+
   return (
+    <>
+    {!toggle && (
     <Container>
         <Wrapper>
 
@@ -74,11 +82,17 @@ const Header = () => {
         </DarkModeToggle>
 
         <HamburgerDiv>
-            <RxHamburgerMenu size={20} onClick={handleClick}/>
+            <RxHamburgerMenu size={20} onClick={handleToggle}/>
         </HamburgerDiv>
 
         </Wrapper>
     </Container>
+
+    )}
+
+     {toggle && <SideBar toggle={toggle} setToggle={setToggle} />}
+
+    </>
   )
 }
 

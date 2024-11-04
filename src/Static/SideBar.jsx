@@ -5,17 +5,21 @@ import { MdClose } from "react-icons/md"
 
 const SideBar = ({ isOpen, onClose }) => {
 
-  const handleClose = () => {
-    document.querySelector('.sidebar')?.classList.remove('open');
-    document.querySelector('.overlay')?.classList.remove('open');
-    document.body.style.overflow = 'auto';
-  };
+  // const handleClose = () => {
+  //   document.querySelector('.sidebar')?.classList.remove('open');
+  //   document.querySelector('.overlay')?.classList.remove('open');
+  //   document.body.style.overflow = 'auto';
+  // };
+
+  const test = () => {
+    setToggle (false)
+}
   
   return (
     <>
-      <Overlay onClick={handleClose} />
+      <Overlay onClick={test} />
         <Container>
-          <CloseButton onClick={handleClose}><MdClose size={40} color="black"/></CloseButton>
+          <CloseButton onClick={test}><MdClose size={40} color="black"/></CloseButton>
             <SidebarContent>
               <NavMenu>
                 <NavLink href="#home">Home</NavLink>
@@ -49,22 +53,6 @@ const Container = styled.div`
     transform: translateX(0);
   }`
 
-// const SidebarContainer = styled.div`
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   height: 100vh;
-//   width: 300px;
-//   background: white;
-//   transform: translateX(-100%);
-//   transition: transform 0.3s ease-in-out;
-//   z-index: 1000;
-  
-//   &.open {
-//     transform: translateX(0);
-//   }
-// `;
-
 const Overlay = styled.div`
   position: fixed;
   width: 100%;
@@ -90,6 +78,15 @@ const Overlay = styled.div`
 //   flex-direction: column;
 //   gap: 20px;
 // `;
+
+const SidebarContent = styled.div`
+  
+`
+
+
+const NavMenu = styled.div`
+  
+`
 
 const NavLink = styled.a`
   text-decoration: none;

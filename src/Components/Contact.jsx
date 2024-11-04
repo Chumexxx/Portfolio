@@ -141,7 +141,7 @@ const Contact = () => {
             <a href="https://x.com/Esquire__Daniel"> <FaXTwitter  color='white' size={30}/> </a>
         </div>
 
-        <a href="https://drive.google.com/file/d/1EH_WHN5D0LEKmkfuwvAuVdVAhObNBUk5/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1XIWRoccQk22Gbu6YX3mkg5PbNF5wacWs/view?usp=sharing">
           <div id='resume'>
             <HiArrowDownTray size={30}/>
             <h3>RESUME</h3>
@@ -164,6 +164,11 @@ const Container = styled.div`
 
   h1{
     font-size: 50px;
+
+  @media (max-width: 550px) {
+    font-size: 30px;
+    text-align: center;
+    }
   }
 
 `

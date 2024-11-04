@@ -13,8 +13,8 @@ const Hero = () => {
       <Wrapper>
 
         <h1>Chukwuemeka Obasi</h1>
-        <p>Full-Stack Software Developer . AI Enthusiast .  Legal Tech</p>
-          <p style={{color: "white"}}>Dynamic Full-Stack Engineer with expertise in building and deploying robust web applications. Skilled at architecting innovative solutions through both front-end and back-end technologies. Creates responsive, user-focused interfaces backed by scalable systems that deliver high performance. Driven by continuous learning and software quality excellence.</p>
+        <p>Full-Stack Software Developer . AI Enthusiast . Legal Tech</p>
+        <p style={{color: "white"}}>Dynamic Full-Stack Engineer with expertise in building and deploying robust web applications. Skilled at architecting innovative solutions through both front-end and back-end technologies. Creates responsive, user-focused interfaces backed by scalable systems that deliver high performance. Driven by continuous learning and software quality excellence.</p>
 
           <div style={{display: "flex" , alignItems: "center", gap: "10px"}}>
           <p>Connect with me here!</p>
@@ -39,8 +39,16 @@ const Hero = () => {
 export default Hero
 
 const Container = styled.div`
-  margin-top: 30px;
+  margin-top: 100px;
   width: 100%;
+
+  @media (max-width: 375px) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 550px) {
+    margin-top: 30px;
+  }
 `
 
 const Wrapper = styled.div`

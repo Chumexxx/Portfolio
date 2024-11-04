@@ -96,7 +96,12 @@ const Container = styled.div`
   margin-top: 120px;
 
   h1{
-    font-size: 50px;
+     font-size: 50px;
+
+    @media (max-width: 550px) {
+    font-size: 30px;
+    text-align: center;
+    }
   }
 `
 
@@ -106,6 +111,11 @@ const Wrapper = styled.div`
   display: flex;
   gap: 50px;
   justify-content: space-around;
+
+  @media (max-width: 550px) {
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
 
   h1{
     font-size: 40px;
@@ -117,10 +127,6 @@ const Wrapper = styled.div`
 
   @media (max-width: 800px) {
       flex-wrap: wrap;
-    }
-
-  @media (max-width: 550px) {
-    flex-wrap: wrap;
     }
 
   @media (max-width: 375px) {
@@ -147,11 +153,20 @@ const LanguagesAndFrameworksDiv = styled.div`
   }
 
   @media (max-width: 550px) {
-      height: 500px;
+      /* height: 500px; */
   }
 
   @media (max-width: 375px) {
-      height: 500px;
+      height: 400px;
+  }
+
+  h1{
+    @media (max-width: 550px) {
+      font-size: 20px;
+  }
+    @media (max-width: 375px) {
+      font-size: 20px;
+  }
   }
 
 `
@@ -176,10 +191,20 @@ const DatabaseAndToolsDiv = styled.div`
     }
 
   @media (max-width: 550px) {
-      height: 500px;
+      /* height: 500px; */
   }
 
   @media (max-width: 375px) {
-      height: 500px;
+      height: 400px;
   }
+
+  h1{
+
+    @media (max-width: 550px) {
+      font-size: 20px;
+  }
+    @media (max-width: 375px) {
+      font-size: 20px;
+  }
+}
 `
