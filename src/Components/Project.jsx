@@ -267,6 +267,10 @@ const IconsDiv = styled.div`
         text-decoration: none;
     }
 
+    div{
+      transition: transform 0.3s ease;
+    }
+
     div:hover{
         transform: scale(1.1);
     }

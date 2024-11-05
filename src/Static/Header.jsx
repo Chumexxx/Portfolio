@@ -14,21 +14,8 @@ const Header = () => {
         setToggle(!toggle);
     };
 
-    // const [isOpen, setIsOpen] = useState(false)
-
-    // const handleClick = () => {
-    //     setIsOpen(!isOpen);
-    //     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
-    //     document.querySelector('.sidebar')?.classList.toggle('open');
-
-    //     // document.querySelector('.sidebar')?.classList.add('open');
-    //     // document.querySelector('.overlay')?.classList.add('open');
-    //     // document.body.style.overflow = 'hidden';
-    // };
-
   return (
     <>
-    {!toggle && (
     <Container>
         <Wrapper>
 
@@ -86,11 +73,9 @@ const Header = () => {
         </HamburgerDiv>
 
         </Wrapper>
+
+        <SideBar isOpen = {toggle} onClose={()=> setToggle(false)}/>
     </Container>
-
-    )}
-
-     {toggle && <SideBar toggle={toggle} setToggle={setToggle} />}
 
     </>
   )

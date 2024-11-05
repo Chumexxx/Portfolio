@@ -1,35 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MdClose } from "react-icons/md"
+import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const SideBar = ({ isOpen, onClose }) => {
-
-  // const handleClose = () => {
-  //   document.querySelector('.sidebar')?.classList.remove('open');
-  //   document.querySelector('.overlay')?.classList.remove('open');
-  //   document.body.style.overflow = 'auto';
-  // };
-
-  const test = () => {
-    setToggle (false)
-}
   
   return (
-    <>
-      <Overlay onClick={test} />
         <Container>
-          <CloseButton onClick={test}><MdClose size={40} color="black"/></CloseButton>
-            <SidebarContent>
-              <NavMenu>
-                <NavLink href="#home">Home</NavLink>
-                <NavLink href="#about">About</NavLink>
-                <NavLink href="#projects">Projects</NavLink>
-                <NavLink href="#contact">Contact</NavLink>
-              </NavMenu>
-            </SidebarContent>
+          <SideWrapper className={isOpen ? "open" : ""}>
+
+            <div className='headerDiv'>
+              <MdClose onClick = {onClose}/>           
+            </div>
+
+            <div className='linkDiv'>
+              <section><p>Home</p></section>
+              <section><p>Projects</p></section>
+              <section><p>Skills</p></section>
+            </div>
+
+          </SideWrapper>
         </Container>
-    </>
   )
 }
 
@@ -53,64 +47,59 @@ const Container = styled.div`
     transform: translateX(0);
   }`
 
-const Overlay = styled.div`
-  position: fixed;
+const SideWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  z-index: 999;
-  
+  right: -100%;
+
+  width: 100%;
+  height: 100vh;
+  background: white;
+
+  transition: 0.5s ease-in-out;
+  z-index: 20000;
+
   &.open {
-    opacity: 1;
-    visibility: visible;
+    right: 0;
   }
-`;
 
-// const Wrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 20px;
-// `;
+  @media (min-width: 995px) {
+    display: none;
+  }
 
-const SidebarContent = styled.div`
-  
+.headerDiv{
+  width: inherit;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+section{
+      height: 65px;
+      border-bottom: 0.1px #e0dbdb solid;
+      box-sizing: border-box;
+      margin-left: 20px;
+      margin-right: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+        p{
+          font-size: 16px;
+          font-weight: 800;
+          color: #40196d;
+        }
+    }
 `
 
 
-const NavMenu = styled.div`
-  
-`
 
-const NavLink = styled.a`
-  text-decoration: none;
-  color: #333;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
 
-  &:hover {
-    background-color: #f5f5f5;
-  }
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px;
-  
-  &:hover {
-    opacity: 0.7;
-  }
-`;

@@ -5,105 +5,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiArrowDownTray } from "react-icons/hi2";
-// import { useState, useEffect } from 'react';
-// import emailjs from '@emailjs/browser';
-// import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Contact = () => {
-
-//   const [firstName, setFirstName] = useState('')
-//   const [lastName, setLastName] = useState('')
-//   const [email, setEmail] = useState('')
-//   const [message, setMessage] = useState('')
-
-//   const ContactForm = () => {
-//     const [formData, setFormData] = useState({
-//       firstName: '',
-//       lastName: '',
-//       email: '',
-//       message: ''
-//     });
-  
-//     const [status, setStatus] = useState({ type: '', message: '' });
-//     const [isSubmitting, setIsSubmitting] = useState(false);
-  
-//     const handleChange = (e) => {
-//       const { name, value } = e.target;
-//       setFormData(prev => ({
-//         ...prev,
-//         [name]: value
-//       }));
-//     };
-  
-//     const handleSubmit = async (e) => {
-//       e.preventDefault();
-//       setIsSubmitting(true);
-//       setStatus({ type: '', message: '' });
-  
-//       try {
-//         const templateParams = {
-//           from_firstName: formData.firstName,
-//           from_lastName: formData.lastName,
-//           from_email: formData.email,
-//           message: formData.message,
-//           to_name: 'Chukwuemeka Obasi',
-//         };
-  
-//         await emailjs.send(
-//           'service_n2mt1d2',
-//           'template_4823jdu',
-//           templateParams,
-//           'P7Ed3qTo8wdNeqV9i'
-//         );
-  
-//         setStatus({
-//           type: 'success',
-//           message: 'Thank you for your message! I will get back to you soon.'
-//         });
-//         setFormData({ name: '', email: '', message: '' });
-//       } catch (error) {
-//         setStatus({
-//           type: 'error',
-//           message: 'There was an error sending your message. Please try again.'
-//         });
-//       } finally {
-//         setIsSubmitting(false);
-//       }
-//     };
-//   }
-
-//       const updateFirstName = (e) => {
-//         setFirstName(
-//             e.target.value
-//             // console.log(e.target.value)
-//         )
-//     }
-
-//     const updateLastName = (e) => {
-//         setLastName(
-//             e.target.value
-//             // console.log(e.target.value)
-//         )
-//     }
-
-//     const updateEmail = (e) => {
-//       setEmail(
-//           e.target.value
-//           // console.log(e.target.value)
-//       )
-//     }
-
-//     const updateMessage = (e) => {
-//       setMessage(
-//           e.target.value
-//           // console.log(e.target.value)
-//       )
-//   }
-
-
-// useEffect(() => {
-//   emailjs.init("P7Ed3qTo8wdNeqV9i");
-// }, []);
   return (
     
     <Container>
@@ -141,7 +44,7 @@ const Contact = () => {
             <a href="https://x.com/Esquire__Daniel"> <FaXTwitter  color='white' size={30}/> </a>
         </div>
 
-        <a href="https://drive.google.com/file/d/1XIWRoccQk22Gbu6YX3mkg5PbNF5wacWs/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1dF0gbJYWr--_-C3n72rwpr4wcpnaXQnc/view?usp=sharing">
           <div id='resume'>
             <HiArrowDownTray size={30}/>
             <h3>RESUME</h3>
