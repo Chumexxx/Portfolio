@@ -1,36 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MdClose } from "react-icons/md"
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 
-const SideBar = ({ isOpen, onClose }) => {
+const SideBar = ({ toggle, handleToggle }) => {
   
   return (
-        <Container>
-          <SideWrapper className={isOpen ? "open" : ""}>
+      <Container onView={toggle}>
 
-            <div className='headerDiv'>
-              <MdClose onClick = {onClose}/>           
-            </div>
+        <SideWrapper>
 
-            <div className='linkDiv'>
-              <section><p>Home</p></section>
-              <section><p>Projects</p></section>
-              <section><p>Skills</p></section>
-            </div>
+          <div onClick={handleToggle}>
+            <MdClose/>           
+          </div>
 
-          </SideWrapper>
-        </Container>
+          <div className='linkDiv'>
+            <a href="#home" onClick={handleToggle}><p>Home</p></a>
+            <a href="#projects" onClick={handleToggle}><p>Projects</p></a>
+            <a href="#skills" onClick={handleToggle}><p>Skills</p></a>
+            <a href="#contact" onClick={handleToggle}><p>Contact</p></a>
+          </div>
+
+        </SideWrapper>
+
+      </Container>
   )
 }
 
 export default SideBar
 
 const Container = styled.div`
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -45,21 +45,38 @@ const Container = styled.div`
   
   &.open {
     transform: translateX(0);
-  }`
+  } */
+
+    display: none;
+
+@media (max-width: 768px) {
+    /* background-color: rgb(247, 247, 247); */
+    background-color: rgb(241, 240, 240);
+    box-sizing: border-box;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 60px; */
+    position: fixed;
+    top: 0;
+    right: 0px;
+    z-index: 1000;
+    /* border-bottom: 1px solid black; */
+}
+`
 
 const SideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   position: fixed;
   top: 0;
   right: -100%;
-
   width: 100%;
   height: 100vh;
   background: white;
-
   transition: 0.5s ease-in-out;
   z-index: 20000;
 

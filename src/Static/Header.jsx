@@ -14,6 +14,17 @@ const Header = () => {
         setToggle(!toggle);
     };
 
+    // useEffect(() => {
+    //     if (toggle) {
+    //         document.body.style.overflow = "hidden"
+    //     } else {
+    //         document.body.style.overflow = "auto"
+    //     }
+    //     return(() => {
+    //         document.body.style.overflow = "auto"
+    //     })
+    // }, [toggle])
+
   return (
     <>
     <Container>
@@ -25,38 +36,30 @@ const Header = () => {
 
         <NavBar>
 
-            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/"> */}
-                <HomeDiv>
-                    <div>
-                    <h2 onClick={() => scrollToHome(Home)}>Home</h2>
-                    </div>
-                </HomeDiv>
-            {/* </Link> */}
+            <HomeDiv>
+                <div>
+                    <a href="#home"><h2>Home</h2></a>
+                </div>
+            </HomeDiv>
 
-            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/projects"> */}
-                <ProjectDiv>
-                    <div>
-                    <h2 onClick={() => scrollToHome(Projects)}>Projects</h2>
-                    </div>
-                </ProjectDiv>
-            {/* </Link> */}
+            <ProjectDiv>
+                <div>
+                    <a href="#projects"><h2>Projects</h2></a>
+                </div>
+            </ProjectDiv>
 
-            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/skills"> */}
-                <SkillsDiv>
-                    <div>
-                    <h2>Skills</h2>
-                    </div>
-                </SkillsDiv>
-            {/* </Link> */}
+            <SkillsDiv>
+                <div>
+                    <a href="#skills"><h2>Skills</h2></a>
+                </div>
+            </SkillsDiv>
             
-            {/* <Link style={{ textDecoration: "none" , color: "white"}} to="/contact"> */}
-                <ContactDiv>
-                    <div>
-                    <h2>Contact</h2>
-                    </div>
+            <ContactDiv>
+                <div>
+                    <a href="#contact"><h2>Contact</h2></a>  
+                </div>
                 
-                </ContactDiv>
-            {/* </Link> */}
+            </ContactDiv>
 
         </NavBar>
 
@@ -68,15 +71,14 @@ const Header = () => {
             <MdOutlineDarkMode size={25}/>
         </DarkModeToggle>
 
-        <HamburgerDiv>
-            <RxHamburgerMenu size={20} onClick={handleToggle}/>
+        <HamburgerDiv  onClick={handleToggle}>
+            <RxHamburgerMenu size={20}/>
         </HamburgerDiv>
 
         </Wrapper>
 
-        <SideBar isOpen = {toggle} onClose={()=> setToggle(false)}/>
     </Container>
-
+    {toggle === false ? null : <SideBar  toggle={toggle} handleToggle={handleToggle} />}
     </>
   )
 }
@@ -175,7 +177,7 @@ const HomeDiv = styled.div`
     width: 80px;
     height: 40px;
 
-    div{
+    a{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -183,9 +185,11 @@ const HomeDiv = styled.div`
         border: none;
         width: 80px;
         height: 40px;
+        text-decoration: none;
+        color: white;
     }
 
-    div:hover{
+    a:hover{
         background-color: #352f2f;
     }
 
@@ -200,17 +204,19 @@ const ProjectDiv = styled.div`
     width: 110px;
     height: 40px;
 
-    div{
+    a{
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
         border: none;
-        width: 80px;
+        width: 120px;
         height: 40px;
+        text-decoration: none;
+        color: white;
     }
 
-    div:hover{
+    a:hover{
         background-color: #352f2f;
     }
 `
@@ -224,17 +230,19 @@ const SkillsDiv = styled.div`
     width: 80px;
     height: 40px;
 
-    div{
+    a{
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
         border: none;
-        width: 120px;
+        width: 80px;
         height: 40px;
+        text-decoration: none;
+        color: white;
     }
 
-    div:hover{
+    a:hover{
         background-color: #352f2f;
     }
 `
@@ -248,17 +256,19 @@ const ContactDiv = styled.div`
     width: 110px;
     height: 40px;
 
-    div{
+    a{
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 5px;
         border: none;
-        width: 80px;
+        width: 120px;
         height: 40px;
+        text-decoration: none;
+        color: white;
     }
 
-    div:hover{
+    a:hover{
         background-color: #352f2f;
     }
 `
