@@ -8,6 +8,9 @@ body{
   font-style: normal;
   /* background-color: var(--background-color);
   color: var(--text-color); */
+  /* background-color: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease; */
 }
 
 /* :root {
@@ -18,4 +21,18 @@ body{
 [data-theme="dark"] {
   --background-color: #000000;
   --text-color: #ffffff;
+} */
+
+/* :root[data-theme="light"] {
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --primary: #0066cc;
+  --secondary: #f0f0f0;
+}
+
+:root[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text: #ffffff;
+  --primary: #66b3ff;
+  --secondary: #333333;
 } */

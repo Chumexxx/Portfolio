@@ -32,24 +32,24 @@ const Contact = () => {
           <div>
             <h2>Contact Information</h2>
             <h5>Fill up the form and send me your message or contact through below details</h5>
-            <h5>+234 9030 8944 33</h5>
-            <h5>obasyemeka@gmail.com</h5>
+            <p><a href="tel:+2349030894433">(+234) 9030 8944 33</a></p>
+            <p><a href="mailto:obasyemeka@gmail.com">obasyemeka@gmail.com</a></p>
           </div>
         
 
-        <div id='contactIcons'>
-            <a  href="https://github.com/Chumexxx"> <FaGithub color='white' size={30}/> </a>
+          <div id='contactIcons'>
+            <a href="https://github.com/Chumexxx"> <FaGithub color='white' size={30}/> </a>
             <a href="www.linkedin.com/in/chukwuemekaobasi"> <FaLinkedin  color='white' size={30}/> </a>
             <a href=""> <FaInstagram  color='white' size={30}/> </a>
             <a href="https://x.com/Esquire__Daniel"> <FaXTwitter  color='white' size={30}/> </a>
-        </div>
-
-        <a href="https://drive.google.com/file/d/1dF0gbJYWr--_-C3n72rwpr4wcpnaXQnc/view?usp=sharing">
-          <div id='resume'>
-            <HiArrowDownTray size={30}/>
-            <h3>RESUME</h3>
           </div>
-        </a>
+
+          <a href="https://drive.google.com/file/d/1dF0gbJYWr--_-C3n72rwpr4wcpnaXQnc/view?usp=sharing">
+            <div id='resume'>
+              <HiArrowDownTray size={30}/>
+              <h3>RESUME</h3>
+            </div>
+          </a>
         
         </RightDiv>
       </ContactDiv>
