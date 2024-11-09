@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MdDarkMode } from "react-icons/md";
 
 
 const SideBar = ({ toggle, handleToggle }) => {
@@ -18,11 +17,6 @@ const SideBar = ({ toggle, handleToggle }) => {
             <a href="#contact" onClick={handleToggle}><p>Contact</p></a>
           </div>
 
-          <ToggleButton>
-                <MdDarkMode size={25}/>
-                {/* {theme === 'dark' ? <MdDarkMode size={25} /> : <MdOutlineDarkMode size={25} />} */}
-          </ToggleButton>
-
           <HamburgerDiv  onClick={handleToggle}>
             <RxHamburgerMenu size={20}/>
           </HamburgerDiv>
@@ -36,7 +30,8 @@ const SideBar = ({ toggle, handleToggle }) => {
 export default SideBar
 
 const Container = styled.div`
-  position: absolute;
+  position: sticky;
+  width: auto;
   z-index: 1000;
 
 `
@@ -46,8 +41,6 @@ const SideWrapper = styled.div`
   border-radius: 10px;
   border: 1px solid white;
   padding: 20px;
-  min-width: 250px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   
@@ -65,35 +58,6 @@ const SideWrapper = styled.div`
     display: none;
   }
 
-`
-
-const ToggleButton = styled.div`
-    /* width: 60px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #242121;
-    display: none; */
-
-    //background: var(--secondary);
-    background-color: #242121;
-    border: none;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text);
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: scale(1.1);
-    }
 `
 
 const HamburgerDiv = styled.div`

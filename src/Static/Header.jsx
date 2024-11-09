@@ -1,31 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { MdDarkMode } from "react-icons/md";
-// import { MdOutlineDarkMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {useState} from "react"
 import SideBar from './SideBar'
-// import { useTheme } from '../Contexts/ThemeContext';
 
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);
-    // const { theme, toggleTheme } = useTheme();
 
     const handleToggle = () => {
         setToggle(!toggle);
     };
-
-    // useEffect(() => {
-    //     if (toggle) {
-    //         document.body.style.overflow = "hidden"
-    //     } else {
-    //         document.body.style.overflow = "auto"
-    //     }
-    //     return(() => {
-    //         document.body.style.overflow = "auto"
-    //     })
-    // }, [toggle])
 
   return (
     <>
@@ -284,17 +270,6 @@ const ContactDiv = styled.div`
 `
 
 const ToggleButton = styled.div`
-    /* width: 60px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #242121;
-    display: none; */
-
-    //background: var(--secondary);
     background-color: #242121;
     border: none;
     border-radius: 5px;
@@ -326,39 +301,6 @@ const ToggleButton = styled.div`
             height: 40px;
     }
 `
-
-// const DarkModeToggle = styled.div`
-//     /* width: 60px;
-//     height: 50px;
-//     border: none;
-//     border-radius: 5px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: #242121; */
-
-//     background: var(--secondary);
-//     border: none;
-//     border-radius: 50%;
-//     width: 40px;
-//     height: 40px;
-//     cursor: pointer;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: var(--text);
-//     transition: all 0.3s ease;
-
-//     &:hover {
-//         transform: scale(1.1);
-//     }
-
-    
-//     @media (max-width: 375px) {
-//             width: 40px;
-//             height: 40px;
-//         }
-// `
 
 const HamburgerDiv = styled.div`
     width: 60px;
