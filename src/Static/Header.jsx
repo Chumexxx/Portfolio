@@ -29,6 +29,7 @@ const Header = () => {
 
   return (
     <>
+        {!toggle && (
         <Container>
             <Wrapper>
 
@@ -77,6 +78,9 @@ const Header = () => {
             </Wrapper>
 
         </Container>
+        
+        )}
+
     {toggle === false ? null : <SideBar  toggle={toggle} handleToggle={handleToggle} />}
     </>
   )
