@@ -29,54 +29,54 @@ const Header = () => {
 
   return (
     <>
-    <Container>
-        <Wrapper>
+        <Container>
+            <Wrapper>
 
-        <Name>
-            <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
-        </Name>
+            <Name>
+                <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
+            </Name>
 
-        <NavBar>
+            <NavBar>
 
-            <HomeDiv>
-                <div>
-                    <a href="#home"><h2>Home</h2></a>
-                </div>
-            </HomeDiv>
+                <HomeDiv>
+                    <div>
+                        <a href="#home"><h2>Home</h2></a>
+                    </div>
+                </HomeDiv>
 
-            <ProjectDiv>
-                <div>
-                    <a href="#projects"><h2>Projects</h2></a>
-                </div>
-            </ProjectDiv>
+                <ProjectDiv>
+                    <div>
+                        <a href="#projects"><h2>Projects</h2></a>
+                    </div>
+                </ProjectDiv>
 
-            <SkillsDiv>
-                <div>
-                    <a href="#skills"><h2>Skills</h2></a>
-                </div>
-            </SkillsDiv>
-            
-            <ContactDiv>
-                <div>
-                    <a href="#contact"><h2>Contact</h2></a>  
-                </div>
+                <SkillsDiv>
+                    <div>
+                        <a href="#skills"><h2>Skills</h2></a>
+                    </div>
+                </SkillsDiv>
                 
-            </ContactDiv>
+                <ContactDiv>
+                    <div>
+                        <a href="#contact"><h2>Contact</h2></a>  
+                    </div>
+                    
+                </ContactDiv>
 
-        </NavBar>
+            </NavBar>
 
-        <ToggleButton>
-            <MdDarkMode size={25}/>
-            {/* {theme === 'dark' ? <MdDarkMode size={25} /> : <MdOutlineDarkMode size={25} />} */}
-        </ToggleButton>
+            <ToggleButton>
+                <MdDarkMode size={25}/>
+                {/* {theme === 'dark' ? <MdDarkMode size={25} /> : <MdOutlineDarkMode size={25} />} */}
+            </ToggleButton>
 
-        <HamburgerDiv  onClick={handleToggle}>
-            <RxHamburgerMenu size={20}/>
-        </HamburgerDiv>
+            <HamburgerDiv  onClick={handleToggle}>
+                <RxHamburgerMenu size={20}/>
+            </HamburgerDiv>
 
-        </Wrapper>
+            </Wrapper>
 
-    </Container>
+        </Container>
     {toggle === false ? null : <SideBar  toggle={toggle} handleToggle={handleToggle} />}
     </>
   )
@@ -108,7 +108,6 @@ const Name = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
     
     h5{
@@ -118,6 +117,14 @@ const Name = styled.div`
         position: relative;
         overflow: hidden;
         display: inline-block;
+
+        @media (max-width: 800px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 20px;
+        }
 
         @media (max-width: 375px) {
             font-size: 20px;
@@ -303,7 +310,17 @@ const ToggleButton = styled.div`
     @media (max-width: 375px) {
             width: 40px;
             height: 40px;
-        }
+    }
+
+    @media (max-width: 550px) {
+            width: 40px;
+            height: 40px;
+    }
+
+    @media (max-width: 800px) {
+            width: 40px;
+            height: 40px;
+    }
 `
 
 // const DarkModeToggle = styled.div`
@@ -355,6 +372,16 @@ const HamburgerDiv = styled.div`
     }
 
     @media (max-width: 375px) {
+            width: 40px;
+            height: 40px;
+    }
+
+    @media (max-width: 550px) {
+            width: 40px;
+            height: 40px;
+    }
+
+    @media (max-width: 800px) {
             width: 40px;
             height: 40px;
     }

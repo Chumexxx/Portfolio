@@ -93,11 +93,6 @@ const ContactDiv = styled.div`
   display: flex;
   gap: 30px;
   justify-content: space-between;
-  transition: transform 0.3s ease;
-
-&:hover {
-  transform: scale(1.2);
-}
 
   @media (max-width: 1650px) {
       flex-wrap: wrap;
