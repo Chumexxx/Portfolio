@@ -19,47 +19,48 @@ const Header = () => {
         <Container>
             <Wrapper>
 
-            <Name>
-                <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
-            </Name>
+                <Name>
+                    <h5><span>&nbsp;CHUKWUEMEKA&nbsp;</span></h5>
+                </Name>
 
-            <NavBar>
+                <NavBar>
 
-                <HomeDiv>
-                    <div>
-                        <a href="#home"><h2>Home</h2></a>
-                    </div>
-                </HomeDiv>
+                    <HomeDiv>
+                        <div>
+                            <a href="#home"><h2>Home</h2></a>
+                        </div>
+                    </HomeDiv>
 
-                <ProjectDiv>
-                    <div>
-                        <a href="#projects"><h2>Projects</h2></a>
-                    </div>
-                </ProjectDiv>
+                    <ProjectDiv>
+                        <div>
+                            <a href="#projects"><h2>Projects</h2></a>
+                        </div>
+                    </ProjectDiv>
 
-                <SkillsDiv>
-                    <div>
-                        <a href="#skills"><h2>Skills</h2></a>
-                    </div>
-                </SkillsDiv>
-                
-                <ContactDiv>
-                    <div>
-                        <a href="#contact"><h2>Contact</h2></a>  
-                    </div>
+                    <SkillsDiv>
+                        <div>
+                            <a href="#skills"><h2>Skills</h2></a>
+                        </div>
+                    </SkillsDiv>
                     
-                </ContactDiv>
+                    <ContactDiv>
+                        <div>
+                            <a href="#contact"><h2>Contact</h2></a>  
+                        </div>
+                        
+                    </ContactDiv>
 
-            </NavBar>
+                </NavBar>
 
-            <ToggleButton>
-                <MdDarkMode size={25}/>
-                {/* {theme === 'dark' ? <MdDarkMode size={25} /> : <MdOutlineDarkMode size={25} />} */}
-            </ToggleButton>
+                <div style={{ width: "120px", display: "flex", justifyContent: "space-between"}}>
+                    <ToggleButton>
+                        <MdDarkMode size={25}/>
+                    </ToggleButton>
 
-            <HamburgerDiv  onClick={handleToggle}>
-                <RxHamburgerMenu size={20}/>
-            </HamburgerDiv>
+                    <HamburgerDiv  onClick={handleToggle}>
+                        <RxHamburgerMenu size={20}/>
+                    </HamburgerDiv>
+                </div>
 
             </Wrapper>
 
@@ -87,10 +88,6 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-
-    @media (max-width: 375px) {
-
-    }
 `
 
 const Name = styled.div`
