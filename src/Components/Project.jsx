@@ -45,8 +45,8 @@ const Project = () => {
           <CardDiv>
            <Card1> 
              <img src={Funiro} alt="" />   
-             <h2>Funiro WebPage</h2>
-             <p>An E-Commerce webpage which allows users acccess to a wide variety of furnitures to chose from.</p>
+             <h2>Funiro LandingPage</h2>
+             <p>Landingpage for a furniture making company which allows users acccess to a wide variety of furnitures to chose from.</p>
                 <IconsDiv>
                   <a href="https://funiro-web-page.vercel.app/">
                     <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
@@ -67,8 +67,8 @@ const Project = () => {
           <CardDiv>
             <Card1> 
               <img src={Nexcent} alt="" />
-              <h2>Nexcent WebPage</h2>
-              <p>A webpage where talent seekers can come to hire talents to help produce adequate projects.</p>
+              <h2>Nexcent LandingPage</h2>
+              <p>A Landingpage for a talent hiring company where talent seekers can come to hire talents to help produce adequate projects.</p>
              <IconsDiv>
               <a href="https://nexcent-web-page.vercel.app/">
                <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
