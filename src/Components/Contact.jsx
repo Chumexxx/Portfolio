@@ -39,8 +39,8 @@ const Contact = () => {
 
           <div id='contactIcons'>
             <a href="https://github.com/Chumexxx"> <FaGithub color='white' size={30}/> </a>
-            <a href="www.linkedin.com/in/chukwuemekaobasi"> <FaLinkedin  color='white' size={30}/> </a>
-            <a href=""> <FaInstagram  color='white' size={30}/> </a>
+            <a href="https://www.linkedin.com/in/chukwuemekaobasi"> <FaLinkedin  color='white' size={30}/> </a>
+            <a href="https://www.instagram.com/daniel_chukwuemeka_/"> <FaInstagram  color='white' size={30}/> </a>
             <a href="https://x.com/Esquire__Daniel"> <FaXTwitter  color='white' size={30}/> </a>
           </div>
 
