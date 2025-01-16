@@ -8,7 +8,7 @@ const Footer = () => {
       <Wrapper>
 
         <FooterDiv>
-          <h2>Portfolio Developed by Chukwuemeka</h2>
+          <h2>Portfolio Developed by Chukwuemeka Obasi</h2>
         </FooterDiv>
         
       </Wrapper>
