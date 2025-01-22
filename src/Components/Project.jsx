@@ -2,12 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import FAQ from '../assets/FAQWebpageImage.png' 
 import Funiro from '../assets/FuniroWebpageImage.png'
-import Nexcent from '../assets/NexcentWebpageImage.png'
-import Countries from '../assets/CountriesWebpage.png'
 import { IoIosArrowRoundForward } from "react-icons/io";
-import ECommerceAPI from "../assets/E-CommerceAPI.png"
+import Farmera from '../assets/Farmera.png'
 import ModernLibraryAPI from "../assets/ModernLibraryAPI.png"
-import FinSharkAPI from "../assets/FinSharkAPI.png"
 import { FaGithub } from "react-icons/fa";
 // import { useEffect } from 'react';
 
@@ -44,6 +41,28 @@ const Project = () => {
 
           <CardDiv>
            <Card1> 
+             <img src={Farmera} alt="" />   
+             <h2>Farmera</h2>
+             <p>Fullstack E-Commerce website that allows for buyers to purchase farm produce directly from farmers at great quantities for the best price</p>
+                <IconsDiv>
+                  <a href="https://farm-olive.vercel.app/">
+                    <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                      <h5 style={{fontSize: "15px"}}>Website</h5>
+                        <IoIosArrowRoundForward size={20} color='black'/>
+                    </div>
+                    </a>
+                      {/* <a  href="https://github.com/Chumexxx/Funiro-WebPage"> 
+                        <div className='button' style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                          <h5 style={{fontSize: "15px"}}>Github</h5>
+                          <FaGithub size={20} color='black'/>
+                        </div>
+                      </a> */}
+                </IconsDiv>
+            </Card1>
+          </CardDiv>
+
+          <CardDiv>
+           <Card1> 
              <img src={Funiro} alt="" />   
              <h2>Funiro LandingPage</h2>
              <p>Landingpage for a furniture making company which allows users acccess to a wide variety of furnitures to chose from.</p>
@@ -64,7 +83,7 @@ const Project = () => {
             </Card1>
           </CardDiv>
 
-          <CardDiv>
+          {/* <CardDiv>
             <Card1> 
               <img src={Nexcent} alt="" />
               <h2>Nexcent LandingPage</h2>
@@ -85,9 +104,9 @@ const Project = () => {
               </a>
              </IconsDiv>
            </Card1>
-         </CardDiv>
+         </CardDiv> */}
 
-          <CardDiv>
+          {/* <CardDiv>
             <Card1>
               <img src={Countries} alt="" />
               <h2>Countries Search Website</h2>
@@ -108,9 +127,9 @@ const Project = () => {
                     </a>
               </IconsDiv>
             </Card1>
-          </CardDiv>
+          </CardDiv> */}
 
-          <CardDiv>
+          {/* <CardDiv>
             <Card1>
               <img src={ECommerceAPI} alt="" />
               <h2>E-Commerce Application API</h2>
@@ -124,7 +143,7 @@ const Project = () => {
                 </a>
               </IconsDiv>
             </Card1>  
-          </CardDiv>
+          </CardDiv> */}
 
           <CardDiv>
             <Card1>
@@ -142,7 +161,7 @@ const Project = () => {
             </Card1>
           </CardDiv>
         
-          <CardDiv>
+          {/* <CardDiv>
             <Card1>
               <img src={FinSharkAPI} alt="" />
               <h2>FinShark Stock Market Application API</h2>
@@ -156,7 +175,7 @@ const Project = () => {
                 </a>
               </IconsDiv>
             </Card1>
-          </CardDiv>
+          </CardDiv> */}
 
         </Wrapper>
     </Container>
@@ -186,8 +205,11 @@ const Container = styled.div`
 const Wrapper = styled.div`
   margin-top: 120px;
   min-width: 85px;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 50px;
 
