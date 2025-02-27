@@ -45,7 +45,7 @@ const Project = () => {
              <h2>Farmera</h2>
              <p>Fullstack E-Commerce website that allows for buyers to purchase farm produce directly from farmers at great quantities for the best price</p>
                 <IconsDiv>
-                  <a href="https://farm-olive.vercel.app/">
+                  <a href="https://farmera-1.vercel.app/">
                     <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
                       <h5 style={{fontSize: "15px"}}>Website</h5>
                         <IoIosArrowRoundForward size={20} color='black'/>
@@ -197,9 +197,6 @@ const Container = styled.div`
       text-align: center;
       }
     }
-
-
-
 `
 
 const Wrapper = styled.div`
