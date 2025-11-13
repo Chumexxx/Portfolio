@@ -17,29 +17,6 @@ const Project = () => {
       <h1>Projects</h1>
         <Wrapper className='wrap'>
           <CardDiv>
-
-            <Card1 className='card'>
-              <img src={FAQ} alt="" />
-                <h2>FAQ WebPage</h2>
-                <p>Enables users look through a wide list of potential <br />questions to get answers quickly.</p>
-                <IconsDiv>
-                  <a href="https://aof-scholars-faq.vercel.app/">
-                    <div className='website' style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
-                       <h5 style={{fontSize: "15px"}}>Website</h5>
-                       <IoIosArrowRoundForward size={20} color='black'/>
-                     </div>
-                  </a>
-                  <a  href="https://github.com/Chumexxx/AOF-Scholars-FAQ"> 
-                    <div className='github' style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
-                      <h5 style={{fontSize: "15px"}}>Github</h5>
-                        <FaGithub size={20} color='black'/>
-                    </div>
-                 </a>
-                </IconsDiv>
-            </Card1>
-          </CardDiv>
-
-          <CardDiv>
            <Card1> 
              <img src={Farmera} alt="" />   
              <h2>Farmera</h2>
