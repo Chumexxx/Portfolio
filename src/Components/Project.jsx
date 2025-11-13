@@ -37,29 +37,6 @@ const Project = () => {
                 </IconsDiv>
             </Card1>
           </CardDiv>
-
-          <CardDiv>
-           <Card1> 
-             <img src={Funiro} alt="" />   
-             <h2>Funiro LandingPage</h2>
-             <p>Landingpage for a furniture making company which allows users acccess to a wide variety of furnitures to chose from.</p>
-                <IconsDiv>
-                  <a href="https://funiro-web-page.vercel.app/">
-                    <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
-                      <h5 style={{fontSize: "15px"}}>Website</h5>
-                        <IoIosArrowRoundForward size={20} color='black'/>
-                    </div>
-                    </a>
-                      <a  href="https://github.com/Chumexxx/Funiro-WebPage"> 
-                        <div className='button' style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
-                          <h5 style={{fontSize: "15px"}}>Github</h5>
-                          <FaGithub size={20} color='black'/>
-                        </div>
-                      </a>
-                </IconsDiv>
-            </Card1>
-          </CardDiv>
-
           {/* <CardDiv>
             <Card1> 
               <img src={Nexcent} alt="" />
@@ -138,7 +115,7 @@ const Project = () => {
             </Card1>
           </CardDiv>
         
-          {/* <CardDiv>
+           <CardDiv>
             <Card1>
               <img src={FinSharkAPI} alt="" />
               <h2>FinShark Stock Market Application API</h2>
@@ -152,7 +129,7 @@ const Project = () => {
                 </a>
               </IconsDiv>
             </Card1>
-          </CardDiv> */}
+          </CardDiv> 
 
         </Wrapper>
     </Container>
