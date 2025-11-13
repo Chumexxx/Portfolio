@@ -115,7 +115,7 @@ const Project = () => {
             </Card1>
           </CardDiv>
         
-           <CardDiv>
+          {/* <CardDiv>
             <Card1>
               <img src={FinSharkAPI} alt="" />
               <h2>FinShark Stock Market Application API</h2>
@@ -129,7 +129,7 @@ const Project = () => {
                 </a>
               </IconsDiv>
             </Card1>
-          </CardDiv> 
+          </CardDiv> */}
 
         </Wrapper>
     </Container>
