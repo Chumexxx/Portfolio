@@ -44,7 +44,7 @@ const Contact = () => {
             <a href="https://x.com/Esquire__Daniel"> <FaXTwitter  color='white' size={30}/> </a>
           </div>
 
-          <a href="https://drive.google.com/file/d/1CGgXKzE0CHIrdZn08iuXTq_u--XpAeLl/view?usp=drive_link">
+          <a href="https://drive.google.com/file/d/1EP2s2o8hRZiSUKSmEJOPv7YN53fC5qql/view?usp=drive_link">
             <div id='resume'>
               <HiArrowDownTray size={30}/>
               <h3>RESUME</h3>
