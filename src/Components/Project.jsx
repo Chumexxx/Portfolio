@@ -5,6 +5,7 @@ import Funiro from '../assets/FuniroWebpageImage.png'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Farmera from '../assets/Farmera.png'
 import ModernLibraryAPI from "../assets/ModernLibraryAPI.png"
+import StashBase from "../assets/StashBase.png"
 import { FaGithub } from "react-icons/fa";
 // import { useEffect } from 'react';
 
