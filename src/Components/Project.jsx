@@ -115,21 +115,21 @@ const Project = () => {
             </Card1>
           </CardDiv>
         
-          {/* <CardDiv>
+          <CardDiv>
             <Card1>
-              <img src={FinSharkAPI} alt="" />
-              <h2>FinShark Stock Market Application API</h2>
-              <p>Fully reliable server side API that helps you interract eith the frontend. Contains different schemas for modern day e-library application. Built with ASP.NETCore on the .NET stack.</p>
+              <img src={StashBase} alt="" />
+              <h2>Stashbase Website</h2>
+              <p>AI powered content bookmarking platform</p>
               <IconsDiv>
-                <a  href="https://github.com/Chumexxx/FinShark_API"> 
-                  <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
-                    <h5 style={{fontSize: "15px"}}>Github</h5>
-                    <FaGithub size={20} color='black'/>
-                  </div>
-                </a>
+                <a href="https://stashbase-one.vercel.app/login">
+                    <div style={{backgroundColor: "white" , color: "black" , width: "100px" , height: "40px", borderRadius: "10px" , display: "flex" , justifyContent: "center" , alignItems: "center", gap: "10px"}}>
+                      <h5 style={{fontSize: "15px"}}>Website</h5>
+                        <IoIosArrowRoundForward size={20} color='black'/>
+                    </div>
+                    </a>
               </IconsDiv>
             </Card1>
-          </CardDiv> */}
+          </CardDiv> 
 
         </Wrapper>
     </Container>
