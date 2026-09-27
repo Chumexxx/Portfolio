@@ -93,8 +93,8 @@ const FeaturedCard = ({ project, flip }) => {
         )}
       </Info>
 
-      <Visual aria-hidden={!project.screenshots}>
-        {project.screenshots ? <PhoneFan shots={project.screenshots} /> : <FutureFaceArt icon={icon} />}
+      <Visual>
+        <PhoneFan shots={project.screenshots} />
       </Visual>
     </Card>
   )
@@ -108,36 +108,6 @@ const PhoneFan = ({ shots }) => (
       </Phone>
     ))}
   </Fan>
-)
-
-// Habit Mirror has no clean store screenshots in the repo, so this is a
-// small illustrative composition in the app's own brand language.
-const HORIZONS = ['3m', '1y', '5y', '10y', '20y']
-
-const FutureFaceArt = ({ icon }) => (
-  <Art>
-    <ArtGlow />
-    <ArtIcon src={icon} alt="" width="168" height="168" loading="lazy" />
-    <ArtCard data-pos="top">
-      <small>Future Face</small>
-      <Toggle>
-        <span>Now</span>
-        <span data-active="true">+20 yrs</span>
-      </Toggle>
-    </ArtCard>
-    <ArtCard data-pos="bottom">
-      <small>Timeline</small>
-      <Timeline>
-        {HORIZONS.map((h, i) => (
-          <span key={h} data-active={i === HORIZONS.length - 1}>{h}</span>
-        ))}
-      </Timeline>
-    </ArtCard>
-    <ArtCard data-pos="side">
-      <small>Habits analysed</small>
-      <strong>8</strong>
-    </ArtCard>
-  </Art>
 )
 
 const MoreCard = ({ project }) => {
@@ -439,130 +409,6 @@ const Phone = styled.div`
     padding: 5px;
 
     img { border-radius: 21px; }
-  }
-`
-
-const Art = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at 50% 45%, rgba(229, 169, 60, 0.18), transparent 60%),
-    #050505;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-  color: #f9f9f9;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 18px 18px;
-    mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 75%);
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 75%);
-  }
-`
-
-const ArtGlow = styled.div`
-  position: absolute;
-  width: 55%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #e5a93c;
-  filter: blur(80px);
-  opacity: 0.35;
-`
-
-const ArtIcon = styled.img`
-  position: relative;
-  width: 38%;
-  height: auto;
-  border-radius: 24%;
-  box-shadow: 0 30px 60px -20px rgba(229, 169, 60, 0.6);
-`
-
-const ArtCard = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: rgba(26, 26, 26, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 12px;
-
-  small {
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #a1a1aa;
-  }
-
-  strong {
-    font-family: var(--font-display);
-    font-size: 28px;
-    color: #e5a93c;
-    line-height: 1;
-  }
-
-  &[data-pos='top'] { top: 8%; left: 7%; }
-  &[data-pos='bottom'] { bottom: 8%; right: 7%; }
-  &[data-pos='side'] { bottom: 14%; left: 7%; }
-
-  @media (max-width: 520px) {
-    padding: 9px 10px;
-    font-size: 11px;
-
-    &[data-pos='top'] { top: 6%; left: 5%; }
-    &[data-pos='bottom'] { bottom: 6%; right: 5%; }
-    &[data-pos='side'] { display: none; }
-  }
-`
-
-const Toggle = styled.div`
-  display: flex;
-  gap: 4px;
-  padding: 3px;
-  border-radius: 999px;
-  background: #121212;
-
-  span {
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    color: #a1a1aa;
-  }
-
-  span[data-active='true'] {
-    background: #e5a93c;
-    color: #050505;
-  }
-`
-
-const Timeline = styled.div`
-  display: flex;
-  gap: 4px;
-
-  span {
-    padding: 4px 8px;
-    border-radius: 8px;
-    background: #121212;
-    color: #a1a1aa;
-    font-weight: 600;
-  }
-
-  span[data-active='true'] {
-    background: rgba(229, 169, 60, 0.18);
-    color: #e5a93c;
-    outline: 1px solid rgba(229, 169, 60, 0.5);
   }
 `
 

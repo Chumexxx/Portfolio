@@ -7,6 +7,9 @@ import habitMirrorIcon from '../assets/habit-mirror-icon.webp'
 import fixproFind from '../assets/fixpro-find-worker-dark.webp'
 import fixproProfile from '../assets/fixpro-worker-profile-light.webp'
 import fixproChat from '../assets/fixpro-chat-light.webp'
+import habitHome from '../assets/habit-mirror-home.webp'
+import habitMirror from '../assets/habit-mirror-mirror.webp'
+import habitInvite from '../assets/habit-mirror-invite.webp'
 import stashbaseImg from '../assets/stashbase.webp'
 import elibraryImg from '../assets/elibrary-api.webp'
 
@@ -18,7 +21,7 @@ export const profile = {
   email: 'obasyemeka@gmail.com',
   phone: '+2349030894433',
   phoneDisplay: '(+234) 903 089 4433',
-  resume: 'https://drive.google.com/file/d/1EP2s2o8hRZiSUKSmEJOPv7YN53fC5qql/view?usp=drive_link',
+  resume: 'https://drive.google.com/file/d/1dRv1hWo8QsOVvSXA2_qjHfBNyOn-TsBp/view?usp=drive_link',
   formspree: 'https://formspree.io/f/mgveandz',
   summary:
     'I design, build and ship production software end to end — native-feeling mobile apps on Google Play and the App Store, the web platforms around them, and the APIs, payments, maps and AI integrations that power them.',
@@ -90,6 +93,11 @@ export const featured = [
       'Step sync from Apple HealthKit & Android Health Connect, plus an AI health coach chat',
     ],
     stack: ['React Native', 'Expo Router', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'Gemini', 'OpenAI', 'Cloudinary', 'React'],
+    screenshots: [
+      { src: habitHome, alt: 'Habit Mirror — Meet your future self home screen' },
+      { src: habitMirror, alt: 'Habit Mirror — The Mirror accountability screen' },
+      { src: habitInvite, alt: 'Habit Mirror — Invite a friend screen' },
+    ],
     links: {
       playStore: 'https://play.google.com/store/apps/details?id=com.vertexcraftcapital.habbitmirror',
       appStore: 'https://apps.apple.com/us/app/habit-mirror/id6799549235',
