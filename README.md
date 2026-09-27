@@ -1,6 +1,6 @@
 # Chukwuemeka Obasi — Portfolio
 
-Personal portfolio of Chukwuemeka Obasi, full-stack & mobile engineer. It showcases shipped products such as **FixPro** and **Habit Mirror**, with direct Google Play, App Store and web links.
+Personal portfolio of Chukwuemeka Obasi, backend-focused software engineer. It showcases shipped products such as **FixPro** and **Habit Mirror**, with direct Google Play, App Store and web links.
 
 Built with React 18, Vite and styled-components. It's a single page with a dark/light theme and a responsive layout down to 320px.
 
@@ -21,6 +21,7 @@ All copy, links and project data live in **`src/data/content.js`**:
 | --- | --- |
 | Name, role, email, phone, résumé link, socials | `profile` |
 | Hero stat strip | `stats` |
+| Work history timeline | `experience` |
 | Featured apps (store links, highlights, stack, screenshots) | `featured` |
 | Smaller project cards | `moreProjects` |
 | "What I do" cards | `services` |
@@ -32,7 +33,7 @@ To add a project image, drop an optimised `.webp` into `src/assets/`, import it 
 
 ```
 src/
-  components/   Nav, Hero, Work, Services, Stack, Contact, Footer, ui (shared primitives)
+  components/   Nav, Hero, Experience, Work, Services, Stack, Contact, Footer, ui (shared primitives)
   data/         content.js (all site content), socials.js
   hooks/        useTheme (dark/light toggle, persisted)
   styles/       GlobalStyle (design tokens for both themes)
@@ -41,3 +42,7 @@ public/         favicon, apple-touch-icon, og-image
 ```
 
 The contact form posts to Formspree (`profile.formspree`).
+
+## SEO
+
+`index.html` holds the title, description, canonical URL, Open Graph/Twitter tags and JSON-LD structured data. `public/` has `robots.txt`, `sitemap.xml`, `site.webmanifest` and the 1200×630 `og-image.jpg`. If the domain changes, update `https://chukwuemeka.vercel.app` in those files.

@@ -4,9 +4,10 @@ import {
   SiTailwindcss, SiStyledcomponents, SiNodedotjs, SiExpress, SiPython, SiFastapi, SiCsharp,
   SiDotnet, SiPostgresql, SiSequelize, SiSqlalchemy, SiMongodb, SiGooglegemini, SiOpenai,
   SiVercel, SiRender, SiFirebase, SiCloudinary, SiSentry, SiGithubactions, SiGit, SiJest,
-  SiVitest, SiPytest, SiPostman, SiFigma,
+  SiVitest, SiPytest, SiPostman, SiFigma, SiOpenjdk, SiSpringboot, SiMysql, SiGraphql, SiDocker,
+  SiAzuredevops, SiJenkins, SiJunit5, SiAnthropic, SiJsonwebtokens, SiSwagger,
 } from 'react-icons/si'
-import { HiOutlineCube } from 'react-icons/hi2'
+import { HiOutlineCube, HiOutlineArrowsRightLeft, HiOutlineKey, HiOutlineBeaker, HiOutlineSparkles, HiOutlineCreditCard } from 'react-icons/hi2'
 import { Container, Section, SectionHeader, Reveal } from './ui'
 import { skills } from '../data/content'
 
@@ -47,6 +48,25 @@ const ICONS = {
   Pytest: SiPytest,
   Postman: SiPostman,
   Figma: SiFigma,
+  'ASP.NET Core': SiDotnet,
+  Java: SiOpenjdk,
+  'Spring Boot': SiSpringboot,
+  MySQL: SiMysql,
+  pgvector: SiPostgresql,
+  'Entity Framework': SiDotnet,
+  REST: HiOutlineArrowsRightLeft,
+  GraphQL: SiGraphql,
+  JWT: SiJsonwebtokens,
+  OAuth: HiOutlineKey,
+  Swagger: SiSwagger,
+  Docker: SiDocker,
+  'Azure DevOps': SiAzuredevops,
+  Jenkins: SiJenkins,
+  xUnit: HiOutlineBeaker,
+  JUnit: SiJunit5,
+  Claude: SiAnthropic,
+  Cohere: HiOutlineSparkles,
+  RevenueCat: HiOutlineCreditCard,
 }
 
 const Stack = () => (
@@ -55,7 +75,7 @@ const Stack = () => (
       <SectionHeader
         eyebrow="Tech stack"
         title="Tools I ship with"
-        subtitle="Chosen for reliability in production, not for the résumé. These are the technologies running my live apps today."
+        subtitle="Backend first, mobile close behind, all chosen for reliability in production. These are the technologies I run in live systems today."
       />
       <Groups>
         {skills.map((g, i) => (

@@ -9,8 +9,8 @@ const Work = () => (
     <Container>
       <SectionHeader
         eyebrow="Selected work"
-        title="Products I've built and shipped"
-        subtitle="Real apps with real users, live on Google Play and the App Store. I own each one end to end: mobile, web, back end and deployment."
+        title="Production systems I've built"
+        subtitle="Real products with real users and real money, live on Google Play and the App Store. I architect the back end, then build and release the mobile and web apps on top of it."
       />
 
       <Featured>
@@ -290,7 +290,9 @@ const WebLink = styled.a`
 `
 
 const Companion = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  grid-template-areas: 'icon text button';
   align-items: center;
   gap: 14px;
   padding: 14px;
@@ -299,18 +301,18 @@ const Companion = styled.div`
   background: var(--bg-elev);
 
   img {
+    grid-area: icon;
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    flex-shrink: 0;
   }
 
   div {
+    grid-area: text;
     display: flex;
     flex-direction: column;
     gap: 2px;
     min-width: 0;
-    flex: 1;
   }
 
   strong {
@@ -324,10 +326,12 @@ const Companion = styled.div`
   }
 
   a {
+    grid-area: button;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    flex-shrink: 0;
+    white-space: nowrap;
     padding: 8px 12px;
     border-radius: 10px;
     font-size: 13px;
@@ -339,10 +343,14 @@ const Companion = styled.div`
     &:hover { border-color: var(--brand); }
   }
 
-  @media (max-width: 480px) {
-    flex-wrap: wrap;
+  /* Phones and narrow cards: the button drops to its own full-width row */
+  @media (max-width: 640px) {
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-areas:
+      'icon text'
+      'button button';
 
-    a { margin-left: 58px; }
+    a { padding: 11px 12px; }
   }
 `
 

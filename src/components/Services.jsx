@@ -1,17 +1,24 @@
 import styled from 'styled-components'
-import { HiOutlineDevicePhoneMobile, HiOutlineWindow, HiOutlineServerStack, HiOutlineSparkles } from 'react-icons/hi2'
+import {
+  HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck,
+  HiOutlineDevicePhoneMobile, HiOutlineRocketLaunch, HiOutlineWindow,
+} from 'react-icons/hi2'
 import { Container, Section, SectionHeader, Reveal } from './ui'
 import { services } from '../data/content'
 
-const ICONS = [HiOutlineDevicePhoneMobile, HiOutlineWindow, HiOutlineServerStack, HiOutlineSparkles]
+// Order matches services in content.js
+const ICONS = [
+  HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck,
+  HiOutlineDevicePhoneMobile, HiOutlineRocketLaunch, HiOutlineWindow,
+]
 
 const Services = () => (
   <Section id="services">
     <Container>
       <SectionHeader
         eyebrow="What I do"
-        title="From idea to App Store, the whole stack"
-        subtitle="I'm most useful when a product needs one person who can own the full journey: design system, app, API, integrations and release."
+        title="Complex backend problems are my favourite kind"
+        subtitle="I'm most at home where the hard parts live: data models, money flows, auth, migrations and the edge cases in between. I also build and ship the mobile apps that sit on top, all the way to the App Store and Google Play."
       />
       <Grid>
         {services.map((s, i) => {
@@ -37,7 +44,7 @@ export default Services
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
   > div { height: 100%; }
