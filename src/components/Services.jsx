@@ -1,17 +1,17 @@
 import styled from 'styled-components'
-import { HiOutlineDevicePhoneMobile, HiOutlineWindow, HiOutlineServerStack, HiOutlineSparkles } from 'react-icons/hi2'
+import { HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck, HiOutlineDevicePhoneMobile } from 'react-icons/hi2'
 import { Container, Section, SectionHeader, Reveal } from './ui'
 import { services } from '../data/content'
 
-const ICONS = [HiOutlineDevicePhoneMobile, HiOutlineWindow, HiOutlineServerStack, HiOutlineSparkles]
+const ICONS = [HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck, HiOutlineDevicePhoneMobile]
 
 const Services = () => (
   <Section id="services">
     <Container>
       <SectionHeader
         eyebrow="What I do"
-        title="From idea to App Store, the whole stack"
-        subtitle="I'm most useful when a product needs one person who can own the full journey: design system, app, API, integrations and release."
+        title="Complex backend problems are my favourite kind"
+        subtitle="I'm most at home where the hard parts live: data models, money flows, auth, migrations and the edge cases in between. I can still carry a feature all the way to the screen."
       />
       <Grid>
         {services.map((s, i) => {

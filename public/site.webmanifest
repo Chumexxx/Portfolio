@@ -1,0 +1,13 @@
+{
+  "name": "Chukwuemeka Obasi — Backend-Focused Software Engineer",
+  "short_name": "Chukwuemeka",
+  "description": "Portfolio of Chukwuemeka Obasi, a backend-focused software engineer building APIs, data systems and production mobile apps.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

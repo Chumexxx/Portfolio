@@ -2,6 +2,7 @@ import GlobalStyle from './styles/GlobalStyle'
 import { useTheme } from './hooks/useTheme'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Experience from './components/Experience'
 import Work from './components/Work'
 import Services from './components/Services'
 import Stack from './components/Stack'
@@ -14,10 +15,11 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <a className="skip-link" href="#work">Skip to content</a>
+      <a className="skip-link" href="#experience">Skip to content</a>
       <Nav theme={theme} onToggleTheme={toggle} />
       <main>
         <Hero />
+        <Experience />
         <Work />
         <Services />
         <Stack />

@@ -13,13 +13,13 @@ const Hero = () => (
         <Copy>
           <Status>
             <Dot />
-            Available for freelance &amp; full-time roles
+            Backend-focused · Open to new roles
           </Status>
 
           <h1>
             Hi, I&apos;m {profile.name.split(' ')[0]}.
             <br />
-            I build <Gradient>apps people use</Gradient> every day.
+            I build <Gradient>the back ends</Gradient> products run on.
           </h1>
 
           <Lead>

@@ -6,6 +6,7 @@ import { Container } from './ui'
 import { profile } from '../data/content'
 
 const LINKS = [
+  { href: '#experience', label: 'Experience' },
   { href: '#work', label: 'Work' },
   { href: '#services', label: 'Services' },
   { href: '#stack', label: 'Stack' },
@@ -147,7 +148,7 @@ const Links = styled.div`
     }
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 920px) {
     display: none;
   }
 `
@@ -181,7 +182,7 @@ const MenuButton = styled(IconButton)`
 
   &:hover { transform: none; }
 
-  @media (max-width: 820px) {
+  @media (max-width: 920px) {
     display: grid;
   }
 `
@@ -208,7 +209,7 @@ const Cta = styled.a`
 const Drawer = styled.div`
   display: none;
 
-  @media (max-width: 820px) {
+  @media (max-width: 920px) {
     display: flex;
     flex-direction: column;
     gap: 4px;
