@@ -24,7 +24,7 @@ export const profile = {
   resume: 'https://drive.google.com/file/d/1dRv1hWo8QsOVvSXA2_qjHfBNyOn-TsBp/view?usp=drive_link',
   formspree: 'https://formspree.io/f/mgveandz',
   summary:
-    'I’m a full-stack engineer who lives on the server side. I design APIs, data models, payment flows and the failure handling around them, then ship them all the way to production web and mobile apps.',
+    'I’m a full-stack engineer who lives on the server side. I design APIs, data models, payment flows and the failure handling around them. I’m also a hands-on React Native engineer who ships and maintains production iOS and Android apps.',
   socials: {
     github: 'https://github.com/Chumexxx',
     linkedin: 'https://www.linkedin.com/in/chukwuemekaobasi',
@@ -42,7 +42,7 @@ export const stats = [
 export const experience = [
   {
     company: 'FixPro',
-    role: 'Full-Stack Engineer (Backend-led)',
+    role: 'Full-Stack & Mobile Engineer (Backend-led)',
     period: 'Jul 2026 — Present',
     location: 'Production marketplace',
     link: 'https://fixpro.com.ng',
@@ -50,21 +50,24 @@ export const experience = [
       'Architected the Node.js/TypeScript/PostgreSQL platform behind a web app and two React Native apps, live with real users and real money moving through it.',
       'Designed payments and payouts around provider failure: multiple providers behind one interface with failover, escrow released on job completion, and admin dispute resolution.',
       'Built audit logging from scratch (severity levels, credential-sanitising writes, exportable admin views) and closed a production KYC access-control gap, with regression tests to keep it closed.',
+      'Own the mobile release pipeline: EAS builds and store submissions for iOS and Android, OTA updates and push notifications, plus splitting one codebase into separate client and worker apps.',
     ],
-    stack: ['Node.js', 'TypeScript', 'Express', 'PostgreSQL', 'React Native'],
+    stack: ['Node.js', 'TypeScript', 'PostgreSQL', 'React Native', 'Expo', 'EAS'],
   },
   {
     company: 'Habit Mirror',
-    role: 'Full-Stack Engineer (Backend-led)',
+    role: 'Full-Stack & Mobile Engineer (Backend-led)',
     period: 'Jul 2026 — Present',
     location: 'AI consumer app',
     link: 'https://habbitmirror.com',
     points: [
       'Own a FastAPI/PostgreSQL back end (SQLAlchemy, Alembic) that serves the mobile app and website from a single API contract.',
       'Recovered a live outage caused by a table created outside Alembic’s version tracking. Restored service with targeted SQL, then added a live-schema guard to the migration pipeline.',
+      'Designed a dual-rail subscription system (Paystack on web; RevenueCat, StoreKit and Play Billing on mobile) behind one access gate, with a self-healing endpoint that re-verifies state against the provider so a missed webhook can’t lock out a paying user.',
       'Root-caused a native crash-on-launch with adb logcat, shipped an OTA mitigation the same day, then a permanent fix gated on the installed binary’s native version.',
+      'Vetted the Meta and TikTok attribution SDKs and fixed three bugs in the vendor packages themselves, including an Expo config-plugin chain and a native Android compile error, before they reached production.',
     ],
-    stack: ['Python', 'FastAPI', 'PostgreSQL', 'Alembic', 'Expo'],
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'React Native', 'Expo', 'RevenueCat'],
   },
   {
     company: 'P+ Measurement Services',
@@ -109,6 +112,7 @@ export const featured = [
       'Audit-logging system with severity levels and credential sanitising, so secrets never leak into admin views',
       'KYC pipeline with automated ID matching, admin review and verified-only access gates',
       'Live location tracking, time-based billing and push notifications, all backed by a test-first suite',
+      'Two purpose-built React Native apps (client and worker) with maps, chat, biometrics, OTA updates and store releases on both platforms',
     ],
     stack: ['Node.js', 'TypeScript', 'Express', 'PostgreSQL', 'Sequelize', 'Vitest', 'Sentry', 'React Native', 'Expo', 'React'],
     screenshots: [
@@ -142,10 +146,11 @@ export const featured = [
       'Async FastAPI + PostgreSQL service (SQLAlchemy 2, asyncpg, Alembic) as the single contract for app and web',
       'AI pipeline with Gemini image generation and LLM reports, caching per time horizon and deterministic fallbacks',
       'Social graph with friend codes, proof posts, reactions, streaks and partner ratings with voice notes',
-      'Health data ingestion from Apple HealthKit and Android Health Connect',
-      'Hardened migrations and native-version-gated OTA fixes, learned from real production incidents',
+      'Dual-rail subscriptions (Paystack for web; RevenueCat, StoreKit and Play Billing for mobile) behind one gate, with server-side re-verification',
+      'Expo Router app with camera, HealthKit / Health Connect, push and deep-link invites, plus native-version-gated OTA fixes',
+      'Hardened Alembic migrations with a live-schema guard, learned from a real production incident',
     ],
-    stack: ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'Gemini', 'OpenAI', 'Cloudinary', 'React Native', 'Expo'],
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Gemini', 'OpenAI', 'RevenueCat', 'React Native', 'Expo Router', 'HealthKit'],
     screenshots: [
       { src: habitHome, alt: 'Habit Mirror app, Meet your future self home screen' },
       { src: habitMirror, alt: 'Habit Mirror app, The Mirror accountability screen' },
@@ -188,20 +193,29 @@ export const services = [
   },
   {
     title: 'Payments, auth & integrations',
-    body: 'Payment and payout providers with failover, JWT/OAuth auth with RBAC, KYC, email/SMS, push and AI services, built to fail safely.',
+    body: 'Payment and subscription flows with failover and reconciliation, JWT/OAuth with RBAC, KYC, email/SMS, push and AI services, built to fail safely.',
   },
   {
-    title: 'Full-stack delivery',
-    body: 'When the product needs it, I ship the React web app and the React Native mobile apps on top, all the way through to App Store release.',
+    title: 'Mobile apps',
+    body: 'Cross-platform iOS and Android apps in React Native and Expo: maps, camera, health data, biometrics, deep links and native SDK integrations.',
+  },
+  {
+    title: 'Release engineering',
+    body: 'EAS builds, App Store and Play Console submissions, OTA updates, push notifications and on-device debugging when production breaks.',
+  },
+  {
+    title: 'Web front ends',
+    body: 'React web apps, admin dashboards and marketing sites that share one API contract with the mobile apps.',
   },
 ]
 
-// Backend groups come first on purpose. Icons are mapped in Stack.jsx.
+// Backend groups come first on purpose, with mobile right behind. Icons are mapped in Stack.jsx.
 export const skills = [
   { group: 'Backend', items: ['Node.js', 'Express', 'TypeScript', 'C#', 'ASP.NET Core', 'Python', 'FastAPI', 'Java', 'Spring Boot'] },
   { group: 'Data', items: ['PostgreSQL', 'pgvector', 'MySQL', 'MongoDB', 'Sequelize', 'Entity Framework', 'SQLAlchemy'] },
+  { group: 'Mobile', items: ['React Native', 'Expo', 'EAS', 'iOS', 'Android', 'Firebase', 'RevenueCat'] },
   { group: 'APIs & security', items: ['REST', 'GraphQL', 'JWT', 'OAuth', 'Swagger', 'Postman'] },
   { group: 'DevOps & testing', items: ['Docker', 'GitHub Actions', 'Azure DevOps', 'Jenkins', 'Render', 'Vercel', 'Sentry', 'Vitest', 'Jest', 'xUnit', 'JUnit', 'Pytest'] },
   { group: 'AI', items: ['Claude', 'Gemini', 'OpenAI', 'Cohere'] },
-  { group: 'Web & mobile', items: ['React', 'React Native', 'Expo', 'Tailwind CSS', 'Firebase'] },
+  { group: 'Web', items: ['React', 'Next.js', 'Tailwind CSS', 'styled-components'] },
 ]

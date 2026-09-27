@@ -19,7 +19,7 @@ const Hero = () => (
           <h1>
             Hi, I&apos;m {profile.name.split(' ')[0]}.
             <br />
-            I build <Gradient>the back ends</Gradient> products run on.
+            I build <Gradient>the back ends</Gradient> products run on, and the apps on top.
           </h1>
 
           <Lead>

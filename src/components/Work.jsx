@@ -10,7 +10,7 @@ const Work = () => (
       <SectionHeader
         eyebrow="Selected work"
         title="Production systems I've built"
-        subtitle="Real products with real users and real money, live on Google Play and the App Store. I architect the back end, then ship the web and mobile clients on top of it."
+        subtitle="Real products with real users and real money, live on Google Play and the App Store. I architect the back end, then build and release the mobile and web apps on top of it."
       />
 
       <Featured>

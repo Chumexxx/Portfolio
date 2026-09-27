@@ -7,7 +7,7 @@ import {
   SiVitest, SiPytest, SiPostman, SiFigma, SiOpenjdk, SiSpringboot, SiMysql, SiGraphql, SiDocker,
   SiAzuredevops, SiJenkins, SiJunit5, SiAnthropic, SiJsonwebtokens, SiSwagger,
 } from 'react-icons/si'
-import { HiOutlineCube, HiOutlineArrowsRightLeft, HiOutlineKey, HiOutlineBeaker, HiOutlineSparkles } from 'react-icons/hi2'
+import { HiOutlineCube, HiOutlineArrowsRightLeft, HiOutlineKey, HiOutlineBeaker, HiOutlineSparkles, HiOutlineCreditCard } from 'react-icons/hi2'
 import { Container, Section, SectionHeader, Reveal } from './ui'
 import { skills } from '../data/content'
 
@@ -66,6 +66,7 @@ const ICONS = {
   JUnit: SiJunit5,
   Claude: SiAnthropic,
   Cohere: HiOutlineSparkles,
+  RevenueCat: HiOutlineCreditCard,
 }
 
 const Stack = () => (
@@ -74,7 +75,7 @@ const Stack = () => (
       <SectionHeader
         eyebrow="Tech stack"
         title="Tools I ship with"
-        subtitle="Backend first, and chosen for reliability in production. These are the technologies I run in live systems today."
+        subtitle="Backend first, mobile close behind, all chosen for reliability in production. These are the technologies I run in live systems today."
       />
       <Groups>
         {skills.map((g, i) => (

@@ -1,9 +1,16 @@
 import styled from 'styled-components'
-import { HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck, HiOutlineDevicePhoneMobile } from 'react-icons/hi2'
+import {
+  HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck,
+  HiOutlineDevicePhoneMobile, HiOutlineRocketLaunch, HiOutlineWindow,
+} from 'react-icons/hi2'
 import { Container, Section, SectionHeader, Reveal } from './ui'
 import { services } from '../data/content'
 
-const ICONS = [HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck, HiOutlineDevicePhoneMobile]
+// Order matches services in content.js
+const ICONS = [
+  HiOutlineServerStack, HiOutlineCircleStack, HiOutlineShieldCheck,
+  HiOutlineDevicePhoneMobile, HiOutlineRocketLaunch, HiOutlineWindow,
+]
 
 const Services = () => (
   <Section id="services">
@@ -11,7 +18,7 @@ const Services = () => (
       <SectionHeader
         eyebrow="What I do"
         title="Complex backend problems are my favourite kind"
-        subtitle="I'm most at home where the hard parts live: data models, money flows, auth, migrations and the edge cases in between. I can still carry a feature all the way to the screen."
+        subtitle="I'm most at home where the hard parts live: data models, money flows, auth, migrations and the edge cases in between. I also build and ship the mobile apps that sit on top, all the way to the App Store and Google Play."
       />
       <Grid>
         {services.map((s, i) => {
@@ -37,7 +44,7 @@ export default Services
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
   > div { height: 100%; }
