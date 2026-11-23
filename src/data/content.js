@@ -21,7 +21,7 @@ export const profile = {
   email: 'obasyemeka@gmail.com',
   phone: '+2348132988927',
   phoneDisplay: '(+234) 813 298 8927',
-  resume: 'https://drive.google.com/file/d/1dRv1hWo8QsOVvSXA2_qjHfBNyOn-TsBp/view?usp=drive_link',
+  resume: 'https://drive.google.com/file/d/1bMo9f0DLK9VUjRDtvvpc_MuvtrLx10lO/view?usp=drive_link',
   formspree: 'https://formspree.io/f/mgveandz',
   summary:
     'I’m a full-stack engineer who lives on the server side. I design APIs, data models, payment flows and the failure handling around them. I’m also a hands-on React Native engineer who ships and maintains production iOS and Android apps.',
